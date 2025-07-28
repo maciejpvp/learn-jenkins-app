@@ -25,7 +25,7 @@ pipeline {
             steps {
                 echo 'Test Stage'
                 sh '''
-                if [ ! -f dist/index.html ]; then
+                if [ ! -f build/index.html ]; then
                   echo 'Build output missing'
                   exit 1
                 fi
