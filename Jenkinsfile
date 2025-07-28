@@ -20,5 +20,20 @@ pipeline {
               '''
             }
         }
+        
+        stage('Test') {
+            steps {
+                echo 'Test Stage'
+                sh '''
+                if [ ! -f dist/index.html ]; then
+                  echo 'Build output missing'
+                  exit 1
+                fi
+
+                npm run test
+                '''
+                
+              }
+          }
     }
 }
