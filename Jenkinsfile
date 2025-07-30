@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh '''
                     ls -la
-                    echo 'test'
+                    echo 'test v2'
                     node --version
                     npm --version
                     npm ci
